@@ -1,0 +1,39 @@
+/* pages/blog/blog.wxss */
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+  background-color: #fff;
+  height: 100rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  box-sizing: border-box;
+}
+
+.header .icon-fabu {
+  font-size: 48rpx;
+}
+
+.publish-container {
+  width: 68rpx;
+  height: 68rpx;
+  display: flex;
+  align-items: center;/*里面的内容在水平方向上的对齐方式：垂直居中*/
+  justify-content: center;/*里面的内容在主轴方向上居中：水平*/
+}
+
+.search-container {
+  flex: 1;/*占剩下的一份*/
+}
+
+.blog-list {
+  margin-top: 120rpx;
+}
+
+.blog-panel {
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+}
