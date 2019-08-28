@@ -14,11 +14,11 @@
 }
 
 .header .icon-fabu {
-  font-size: 48rpx;
+  font-size: 60rpx;
 }
 
 .publish-container {
-  width: 68rpx;
+  width: 78rpx;
   height: 68rpx;
   display: flex;
   align-items: center;/*里面的内容在水平方向上的对齐方式：垂直居中*/

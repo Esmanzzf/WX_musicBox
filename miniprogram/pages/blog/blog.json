@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "f-search":"/components/search/search"
+    "f-search":"/components/search/search",
+    "f-login":"/components/login//login"
   },
   "navigationBarTitleText":"播客"
 }

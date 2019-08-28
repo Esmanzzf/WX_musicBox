@@ -1,0 +1,7 @@
+<!--components/login/login.wxml-->
+<f-bottom-modal isModalShow="{{isModalShow}}">
+  <!--将带有slot属性的标签的内容插到子组件对应的的slot中，这部分写在引用子组件的标签的中间-->
+  <view slot="modal-content">
+    <button class="login" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">获取微信授权信息</button>
+  </view>
+</f-bottom-modal>

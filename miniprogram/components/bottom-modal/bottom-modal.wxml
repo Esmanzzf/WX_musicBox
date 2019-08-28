@@ -1,2 +1,8 @@
 <!--components/bottom-modal/bottom-modal.wxml-->
-<text>components/bottom-modal/bottom-modal.wxml</text>
+<view class="modal" hidden="{{!isModalShow}}">
+  <view class="panel">
+    <i class="iconfont icon-shanchu" bindtap="onCloseModal"></i>
+    <!--slot插槽:作用是将父组件中有slot属性的标签的HTML内容插入到这里-->
+    <slot name="modal-content"></slot>
+  </view>
+</view>

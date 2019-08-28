@@ -2,10 +2,10 @@
   "pages": [
     "pages/blog/blog",
     "pages/playList/playList",
-
     "pages/my/my",
     "pages/musiclist/musiclist",
-    "pages/player/player"
+    "pages/player/player",
+    "pages/blog-edit/blog-edit"
   ],
   "requiredBackgroundModes": [
     "audio",

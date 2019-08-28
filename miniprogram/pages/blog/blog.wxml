@@ -10,6 +10,12 @@
     <view class="search-container">
       <f-search iconfont="iconfont" icon-sousuo="icon-sousuo" bind:search="onSearch" />
     </view>
-
   </view>
+
+  <!--底部弹出层:调用login组件，login在调用bottom=modal组件-->
+  <f-login isModalShow="{{modalShow}}" 
+    bind:loginsuccess="onLoginSuccess"
+    bind:loginfail="onLoginFail">
+  </f-login>
+
 </view>

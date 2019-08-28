@@ -31,7 +31,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -51,6 +51,13 @@
 					"name": "pages/blog/blog",
 					"pathName": "pages/blog/blog",
 					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/blog-edit/blog-edit",
+					"pathName": "pages/blog-edit/blog-edit",
+					"query": "nickName=\"🍒夜仙\"&avatarUrl=\"https://wx.qlogo.cn/mmopen/vi_32/sgniaZwaJ1Aw8g5C4…WXwCHQ1wicM16oowPfENEYmF65BNM0FvuxnTABRAnf2wQ/132\"",
 					"scene": null
 				}
 			]
