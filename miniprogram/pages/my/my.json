@@ -1,4 +1,6 @@
 {
   "usingComponents": {},
-    "navigationBarTitleText": "我的主页"
+  "navigationBarTitleText": "个人中心",
+  "disableScroll":true
+
 }

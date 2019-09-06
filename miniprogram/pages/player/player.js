@@ -84,6 +84,8 @@ Page({
         backgroundAudioManager.coverImgUrl = music.al.picUrl
         backgroundAudioManager.singer = music.ar[0].name
         backgroundAudioManager.epname = music.al.name
+        //保存播放历史
+        this.savePlayHistory()
       }
       this.setData({
         isPlaying:true
@@ -160,6 +162,33 @@ Page({
     this.setData({
       isPlaying: false,
     })
+  },
+
+  //保存播放历史，可以在加载音乐函数_loadMusicDetail中的设置了backgroundAudioManager.src之后调用
+  savePlayHistory() {
+    //当前正在播放的歌曲
+    const music = musiclist[nowPlayingIndex]
+    //获取到全局的openid
+    const openid = app.globalData.openid
+    //将得到的openid传给wx.getStorageSync的key当做参数，获取对应的本地存储（value），是一个数组
+    const history = wx.getStorageSync(openid)
+    let bHave = false
+    //判断歌曲是否已经保存
+    for (let i = 0, len = history.length; i < len; i++) {
+      if (history[i].id == music.id) {
+        bHave = true
+        break
+      }
+    }
+    //如果历史里没有就把当前播放音乐插入历史数组
+    if (!bHave) {
+      history.unshift(music)//在数组开头插入，返回数组长度
+      //将openid和对应的数组当做value存储起来
+      wx.setStorage({//用异步存储，这里同步异步都可以，但异步是传入一个对象，同步是字符串
+        key: openid,
+        data: history,
+      })
+    }
   },
 
   /**

@@ -5,7 +5,10 @@
     "pages/my/my",
     "pages/musiclist/musiclist",
     "pages/player/player",
-    "pages/blog-edit/blog-edit"
+    "pages/blog-edit/blog-edit",
+    "pages/blog-comment/blog-comment",
+    "pages/my-playHistory/my-playHistory",
+    "pages/my-blogHistory/my-blogHistory"
   ],
   "requiredBackgroundModes": [
     "audio",

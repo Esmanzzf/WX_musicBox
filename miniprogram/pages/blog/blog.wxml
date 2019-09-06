@@ -12,6 +12,20 @@
     </view>
   </view>
 
+  <!--播客卡片列表+评论组件-->
+  <view class="blog-list">
+    <block wx:for="{{blogList}}" wx:key="_id">
+      <view class="blog-panel">
+           <f-blogcard blog="{{item}}" bindtap="goComment" data-blogid="{{item._id}}"></f-blogcard>
+           <f-blogctrl 
+           blog="{{item._id}}"
+           iconfont="iconfont" 
+           icon-pinglun="icon-pinglun"
+           icon-fenxiang="icon-fenxiang"></f-blogctrl>
+      </view>
+    </block>
+  </view>
+
   <!--底部弹出层:调用login组件，login在调用bottom=modal组件-->
   <f-login isModalShow="{{modalShow}}" 
     bind:loginsuccess="onLoginSuccess"

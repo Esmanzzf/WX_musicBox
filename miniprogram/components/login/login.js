@@ -26,7 +26,7 @@ Component({
         this.setData({
           isModalShow: false
         })
-        this.triggerEvent('loginsuccess', userInfo)//向父组件blog抛出一个事件，同时将userInfo传出去
+        this.triggerEvent('loginsuccess', userInfo)//向父组件blog抛出一个事件，同时将userInfo传出去（<f-login bind:loginsuccess="onLoginSuccess"> ）
       } else {
         this.triggerEvent('loginfail')
       }

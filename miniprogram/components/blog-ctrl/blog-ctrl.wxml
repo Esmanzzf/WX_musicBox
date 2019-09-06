@@ -1,0 +1,27 @@
+<!--components/blog-ctrl/blog-ctrl.wxml-->
+<view class="ctrl">
+  <view class="ctrl-item" bindtap="onComment">
+    <i class="iconfont icon-pinglun icon"></i>
+    <text>评论</text>
+  </view>
+  <view class="ctrl-item share">
+    <button open-type="share" data-blogid="{{blogId}}" data-blog="{{blog}}" class="share-btn" hover-class="share-hover">
+      <i class="iconfont icon-fenxiang icon"></i>
+      <text>分享</text>
+    </button>
+  </view>
+</view>
+<!--引用授权组件：其中login组件的wxml是一个modalshow组件插槽了一个按钮-->
+<f-login isModalShow="{{loginShow}}" bind:loginsuccess="onLoginSuccess" bind:loginfail="onLoginFail">
+
+</f-login>
+
+<!--引用底部弹出层组件-->
+<f-bottom-modal isModalShow="{{modalShow}}">
+  <!--这里将view改成form用于云调用模板消息推送，并设置report-submit="true"-->
+  <form slot="modal-content" report-submit="true" bind:submit="onSend">
+  <textarea name="content" class="comment-content" placeholder="写评论..." bindinput="onInput" value="{{content}}" fixed="true"></textarea>
+  <!--form-type="submit"提交按钮所在的表单，同时会触发bind:submit="onSend"-->
+  <button class="send" form-type="submit">发送</button>
+  </form>
+</f-bottom-modal>

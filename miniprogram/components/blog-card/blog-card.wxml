@@ -1,0 +1,22 @@
+<!--components/blog-card/blog-card.wxml-->
+<view class="blog">
+  <!--卡片头部：头像、昵称、时间-->
+  <view class="blog-title">
+    <image class="blog-portrait" src="{{blog.avatarUrl}}"></image>
+    <view class="blog-box">
+      <view class="blog-nickName">{{blog.nickName}}</view>
+      <view class="blog-time">{{_createTime}}</view>
+    </view>
+  </view>
+  <!--卡片文本-->
+  <view class="blog-content">{{blog.content}}</view>
+  <!--卡片图片-->
+  <view class="blog-img">
+    <block wx:for="{{blog.img}}" wx:key="{{index}}">
+      <image class="img" src="{{item}}" mode="aspectFill" 
+      catch:tap="onPreviewImage" 
+      data-imgsrc="{{item}}" 
+      data-imgs="{{blog.img}}"></image>
+    </block>
+  </view>
+</view>

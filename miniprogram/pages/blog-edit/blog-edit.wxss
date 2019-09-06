@@ -22,8 +22,8 @@
 }
 /*加号图片以及选中的图片显示出来的样式*/
 .image-wrap {
-  width: 220rpx;
-  height: 220rpx;
+  width: 218rpx;
+  height: 218rpx;
   margin: 8rpx;
   position: relative;/*配合弹性盒子实现自动换行*/
   overflow: hidden;

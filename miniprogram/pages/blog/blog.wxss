@@ -29,10 +29,11 @@
   flex: 1;/*占剩下的一份*/
 }
 
+/*播客列表样式*/
 .blog-list {
   margin-top: 120rpx;
 }
-
+/*播客卡片样式*/
 .blog-panel {
   margin-bottom: 20rpx;
   box-sizing: border-box;

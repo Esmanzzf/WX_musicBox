@@ -1,7 +1,10 @@
 {
   "usingComponents": {
     "f-search":"/components/search/search",
-    "f-login":"/components/login//login"
+    "f-login":"/components/login//login",
+    "f-blogcard":"/components/blog-card/blog-card",
+    "f-blogctrl":"/components/blog-ctrl/blog-ctrl"
   },
-  "navigationBarTitleText":"播客"
+  "navigationBarTitleText":"我的播客",
+  "enablePullDownRefresh": true
 }

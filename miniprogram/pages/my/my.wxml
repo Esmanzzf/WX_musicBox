@@ -1,2 +1,43 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<!--头像、昵称-->
+<view class="profile-header">
+  <view class="avatar-url">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <open-data type="userNickName" class="nickname"></open-data>
+</view>
+
+<!--导航条-->
+<view class="nav">
+  <view class="nav-item">
+    <navigator class="content" url="/pages/my-playHistory/my-playHistory">
+      <i class="iconfont icon-ziyuanldpi"></i>
+      <text class="text">最近播放</text>
+      <i class="iconfont icon-xiangyou"></i>
+    </navigator>
+  </view>
+
+  <view class="nav-item">
+    <navigator class="content" url="/pages/my-blogHistory/my-blogHistory">
+      <i class="iconfont icon-shoucang"></i>
+      <text class="text">我的发现</text>
+      <i class="iconfont icon-xiangyou"></i>
+    </navigator>
+  </view>
+
+  <view class="nav-item">
+    <view class="content">
+      <i class="iconfont icon-youxi"></i>
+      <text class="text">我的游戏</text>
+      <i class="iconfont icon-xiangyou"></i>
+    </view>
+  </view>
+
+  <view class="nav-item">
+    <view class="content" bind:tap="onTapQrCode">
+      <i class="iconfont icon-erweimasaomiao"></i>
+      <text class="text">小程序码</text>
+      <i class="iconfont icon-xiangyou"></i>
+    </view>
+  </view>
+</view>

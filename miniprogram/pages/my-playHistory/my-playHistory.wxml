@@ -1,0 +1,2 @@
+<!--pages/my-playHistory/my-playHistory.wxml-->
+<f-musiclist ml="{{musiclist}}"></f-musiclist>
